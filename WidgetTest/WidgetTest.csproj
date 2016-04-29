@@ -46,7 +46,6 @@
   <ItemGroup>
     <Content Include="css\app.css" />
     <Content Include="img\logo.png" />
-    <Content Include="index.html" />
     <Content Include="SampleChartWidget\icon.png" />
     <Content Include="SampleChartWidget\index.html" />
     <Content Include="scripts\highcharts.js" />
@@ -57,7 +56,6 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="SampleChartWidget\SampleChartWidget.ts" />
-    <TypeScriptCompile Include="scripts\app.ts" />
     <TypeScriptCompile Include="typings\highcharts\highcharts.d.ts" />
     <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="typings\q\q.d.ts" />
