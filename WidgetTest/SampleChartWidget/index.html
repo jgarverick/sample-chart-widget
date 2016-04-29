@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SampleChartWidget Widget</title>
+    <link href="../css/app.css" type="text/css" rel="stylesheet" />
+    <script src="../scripts/highcharts.js"></script>
+    <script src="../scripts/VSS.SDK.js"></script>
+    <script type="text/javascript">
+        VSS.init({
+            explicitNotifyLoaded: true,
+            usePlatformStyles: true
+        });
+
+        VSS.require(["TFS/Dashboards/WidgetHelpers", "SampleChartWidget/SampleChartWidget"],
+            function (WidgetHelpers, Chart) {
+                WidgetHelpers.IncludeWidgetStyles();
+                VSS.register("SampleChartWidget", function () {
+                    return {
+                        load: function (widgetSettings) {
+                            Chart.widget.init("container");
+
+                            return WidgetHelpers.WidgetStatusHelper.Success();
+                        }
+                    }
+                });
+                VSS.notifyLoadSucceeded();
+            });
+    </script>
+
+</head>
+<body>
+    <div class="widget">
+        <h2 class="title">Sample Graph Data</h2>
+        <div id="container"></div>
+    </div>
+</body>
+</html>

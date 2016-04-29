@@ -1,0 +1,12 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+span {
+    font-style: italic;
+}
+#container {
+    width: 200px;
+    height: 400px;
+    margin: 1em auto;
+}
